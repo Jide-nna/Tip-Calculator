@@ -14,7 +14,7 @@
 }
 body {
     font-size: 24px;
-    padding: 15% 25%;
+    padding: 15% 23%;
     background: var(--Light-grayish-cyan);
 }
 #body {
@@ -23,6 +23,7 @@ body {
     padding: 2%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
 }
 h5 {
     color: var(--Dark-grayish-cyan);
@@ -32,7 +33,13 @@ h5 {
     justify-content: space-between;
     background: var(--Very-light-grayish-cyan);
     padding: 2%;
-    border-radius: 10%;
+    border-radius: 5px;
+}
+.bill-amount:hover,
+.bill-amount:active {
+    border: 2px solid var(--Strong-cyan);
+    opacity: 80%;
+    cursor: pointer;
 }
 .bill-amount img {
     height: 2%;
@@ -58,17 +65,43 @@ button {
     padding: 15%;
     color: var(--White);
 }
+button:hover,
+button:active {
+    cursor: pointer;
+    background: var(--Strong-cyan);
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+small {
+    font-size: 15px;
+    color: red;
+    opacity: 80%;
+    margin-top: 10%;
+    display: none;
+}
 .custom {
     background: var(--Very-light-grayish-cyan);
     color: var(--Grayish-cyan);
+}
+.custom:hover,
+.custom:active {
+    border: 2px solid var(--Strong-cyan);
+    opacity: 80%;
 }
 .individual {
     display: flex;
     justify-content: space-between;
     background: var(--Very-light-grayish-cyan);
     padding: 2%;
-    border-radius: 10%;
+    border-radius: 5px;
     margin-top: 5%;
+}
+.after {
+    border: 2px solid red;
+    border-radius: 5px;
+    opacity: 70%;
 }
 .individual img {
     height: 2%;
@@ -78,7 +111,46 @@ button {
     color: var(--Very-dark-cyan);
 }
 .right {
-    border-radius: 5%;
+    border-radius: 10px;
     background: var(--Very-dark-cyan);
-    justify-self: end;
+    padding: 10%;
+}
+.left-2 p {
+    font-size: 15px;
+    color: var(--Very-light-grayish-cyan);
+    opacity: 90%;
+}
+.u,
+.m {
+    display: flex;
+    justify-content: space-between;
+}
+.left-2 h6,
+.left-3 h6 {
+    margin-top: 0%;
+}
+.m {
+    margin-top: 15%;
+}
+.left-3 p {
+    color: var(--Very-light-grayish-cyan);
+    opacity: 90%;
+    font-size: 15px;
+}
+.right button {
+    background: var(--Strong-cyan);
+    width: 100%;
+    padding: 5%;
+    margin-top: 40%;
+    text-transform: uppercase;
+}
+.right button:hover,
+.right button:active {
+    cursor: pointer;
+    opacity: 70%;
+    color: var(--Very-dark-cyan);
+}
+.right h4{
+    color: var(--Strong-cyan);
+    margin-top: 15%;
 }
