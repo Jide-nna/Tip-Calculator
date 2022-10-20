@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,8 +15,14 @@
 }
 body {
     font-size: 24px;
-    padding: 15% 20%;
+    padding:5% 18%;
     background: var(--Light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+}
+.logo {
+    text-align: center;
+    margin-top: 1.7rem;
+    margin-bottom: 2.3rem;
 }
 #body {
     background: var(--White);
@@ -71,13 +78,19 @@ h6 {
     background: var(--Very-dark-cyan);
     border: none;
     border-radius: 5px;
-    padding: 13%;
+    padding: 10%;
     color: var(--White);
+    font-family: 'Space Mono', monospace;
 }
-button:hover,
+/* button:hover,
 button:active {
     cursor: pointer;
     background: var(--Strong-cyan);
+} */
+.active-tip {
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    font-weight: bolder;
 }
 .flex {
     display: flex;
@@ -100,11 +113,16 @@ small {
     padding: 13%;
     border-radius: 5px;
 }
-.button:hover,
+.active {
+    background: var(--White);
+    border: 2px solid var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+/* .button:hover,
 .button:active {
     border: 1px solid var(--Strong-cyan);
     opacity: 80%;
-}
+} */
 .individual {
     display: flex;
     justify-content: space-between;
@@ -156,12 +174,16 @@ small {
     opacity: 90%;
     font-size: 15px;
 }
-.right button {
+.right .reset {
     background: var(--Strong-cyan);
+    border: none;
     width: 100%;
     padding: 5%;
     margin-top: 40%;
     text-transform: uppercase;
+    border-radius: 5px;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
 }
 .right button:hover,
 .right button:active {
@@ -169,8 +191,59 @@ small {
     opacity: 70%;
     color: var(--Very-dark-cyan);
 }
-.right h4{
+.tip-amount,
+.total-person {
     color: var(--Strong-cyan);
-    margin-top: 15%;
     font-size: 35px;
+}
+@media only screen and (max-width : 1080px) {
+    body {
+        padding: 5% 10%;
+    }
+}
+@media only screen and (max-width : 768px) {
+    body {
+        padding: 5% 2%;
+    }
+}
+@media only screen and (max-width : 600px) {
+    body {
+        padding: 5% 5%;
+    }
+    #body {
+        grid-template-columns: 1fr;
+        gap: 0%;
+        padding: 5%;
+    }
+    .input {
+        padding: 5px;
+        margin-left: 3%;
+        background-position: 17px 12px;
+        width: 95%;
+    }
+    .buttons {
+        width: 95%;
+    }
+    .right {
+        width: 100%;
+    }
+    .right .reset {
+        margin-top: 10%;
+    }
+}
+@media only screen and (max-width : 375px) {
+    body {
+        padding: 5% 0%;
+    }
+    #body {
+        padding: 7%;
+    }
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3%;
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
 }
